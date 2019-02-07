@@ -7,8 +7,11 @@
 	<constant name="struts.action.extension" value="action"/>
 	
 	<package name="crm" extends="struts-default" namespace="/">
+		<!-- 全局结果 -->
+
 		<action name="user_*" class="userAction" method="{1}">
-			<result name="login">/login.jsp</result>
+			<result name = "login">/login.jsp</result>
+			<result name = "success" type = "redirect">/index.jsp</result>
 		</action>
 	</package>
 </struts>
